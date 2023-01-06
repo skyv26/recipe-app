@@ -7,8 +7,13 @@ Rails.application.routes.draw do
     resources :recipes
     resources :inventorys
   end
+  resources :foods, :inventorys do
+    resources :inventory_foods
+  end
+
   resources :recipes
   resources :inventorys
   resources :foods
+  resources :inventory_foods
 
 end
