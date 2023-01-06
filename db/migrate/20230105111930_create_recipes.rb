@@ -6,7 +6,7 @@ class CreateRecipes < ActiveRecord::Migration[7.0]
       t.float :cooking_time
       t.text :description
       t.boolean :public
-      t.references :users, null: false, foreign_key: {on_delete: :cascade}
+      t.references :user, references: :users, null: false, foreign_key: {to_table: :users, on_delete: :cascade}
 
       t.timestamps
     end
