@@ -9,5 +9,6 @@ Rails.application.routes.draw do
   end
   resources :recipes
   resources :inventorys
+  resources :foods
 
 end
