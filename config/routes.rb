@@ -5,7 +5,9 @@ Rails.application.routes.draw do
   root "users#index"
   resources :users do
     resources :recipes
+    resources :inventorys
   end
   resources :recipes
+  resources :inventorys
 
 end
