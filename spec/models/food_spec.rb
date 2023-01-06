@@ -31,5 +31,4 @@ RSpec.describe Food, type: :model do
   it 'price should be "12.25"' do
     expect(subject.price).to eql(12.25)
   end
-
 end

@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe Recipe, type: :model do
   user = User.create(name: 'A.K Verma')
-  subject { Recipe.new(name: 'Aloo ka prantha', description: 'Indian Aloo prantha must try' ,user: user) }
+  subject { Recipe.new(name: 'Aloo ka prantha', description: 'Indian Aloo prantha must try', user:) }
 
   before { subject.save }
 

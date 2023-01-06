@@ -2,10 +2,10 @@ require 'rails_helper'
 
 RSpec.describe RecipeFood, type: :model do
   user = User.create(name: 'A.K Verma')
-  recipe = Recipe.create(name: 'Aloo ka prantha', description: 'Indian Aloo prantha must try' ,user: user)
+  recipe = Recipe.create(name: 'Aloo ka prantha', description: 'Indian Aloo prantha must try', user:)
   food = Food.create(name: 'Apple', measurement_unit: 'grams', price: 12.25)
 
-  subject { RecipeFood.new(quantity: 12, recipe: recipe, food: food) }
+  subject { RecipeFood.new(quantity: 12, recipe:, food:) }
 
   before { subject.save }
 

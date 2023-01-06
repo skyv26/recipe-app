@@ -17,5 +17,4 @@ RSpec.describe User, type: :model do
   it 'name should be "A Verma"' do
     expect(subject.name).to eql('A Verma')
   end
-
 end

@@ -2,10 +2,10 @@ require 'rails_helper'
 
 RSpec.describe InventoryFood, type: :model do
   user = User.create(name: 'A.K Verma')
-  inventory = Inventory.create(name: 'Sweets Corner', user: user)
+  inventory = Inventory.create(name: 'Sweets Corner', user:)
   food = Food.create(name: 'Apple', measurement_unit: 'grams', price: 12.25)
 
-  subject { InventoryFood.new(quantity: 15, inventory: inventory, food: food) }
+  subject { InventoryFood.new(quantity: 15, inventory:, food:) }
 
   before { subject.save }
 
@@ -35,5 +35,4 @@ RSpec.describe InventoryFood, type: :model do
   it 'food name should be "Apple"' do
     expect(subject.food.name).to eql('Apple')
   end
-
 end
